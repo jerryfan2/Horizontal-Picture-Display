@@ -1,0 +1,34 @@
+.App {
+    text-align: center;
+}
+
+.scrollingContainer {
+    overflow-x: scroll;
+    display: flex;
+}
+
+.photoContainer {
+    padding: 50px;
+    position: relative;
+}
+
+.photoTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    font-family: 'Lucida Console';
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.photoContainer img {
+    border-radius: 30px;
+    border: 5px solid black;
+    box-shadow: 2rem 1rem rgba(0, 0, 0, 0.4);
+    height: 70vh;
+}
+
+.App button {
+    margin-top: 10px;
+}
