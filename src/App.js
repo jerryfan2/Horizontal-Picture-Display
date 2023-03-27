@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import ButtonContainer from './ButtonContainer';
 
-import PhotoContainer from './PhotoContainer'
+import ScrollingContainer from './ScrollingContainer';
 
 const API_URL = "http://jsonplaceholder.typicode.com";
 
@@ -45,13 +46,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="scrollingContainer">
-        {
-          photos.map(photo => (
-            <PhotoContainer photo={photo}  key={photo.id}/>))
-        }
-      </div>
-      <button onClick={handleRandomizePhotos}>Randomize Photo Order</button>
+      <ScrollingContainer photos={photos}/>
+      <ButtonContainer onClick={handleRandomizePhotos}/>
     </div>
   );
 }
