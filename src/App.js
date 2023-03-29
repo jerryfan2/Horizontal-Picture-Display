@@ -20,7 +20,7 @@ function App() {
     const randomIndex = Math.floor(Math.random() * photos.length);
     const reshuffledElement = photos[randomIndex];
     photos[randomIndex] = photos[0];
-    photos[0] = reshuffledElement
+    photos[0] = reshuffledElement;
     return [photos[0], ...randomizePhotos(photos.slice(1))];
   }
 
@@ -35,7 +35,6 @@ function App() {
     } catch (e) {
       console.log(e);
     }
-    
   }
 
   // load photo data from local storage if exists; else fetch from API
